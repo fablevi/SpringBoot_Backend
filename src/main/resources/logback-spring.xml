@@ -1,0 +1,19 @@
+<configuration>
+
+    <logger name="org.apache.catalina" level="DEBUG" />
+
+    <!-- Az alábbi rész opcionális, csak ha egyedi beállításokat akarsz a Tomcat naplózáshoz -->
+
+    <!-- Példa: a Tomcat hozzáfűzi az összes naplózási üzenetet a "catalina.out" fájlhoz -->
+    <appender name="CATALINA_OUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.err</target>
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CATALINA_OUT" />
+    </root>
+
+</configuration>
